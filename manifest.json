@@ -9,9 +9,8 @@
     "content_scripts": [
         {
         "matches": [
-            "https://eksisozluk.com/*",
             "https://banabenianlat.net/*",
-            "https://www.linkedin.com/*"
+            "https://www.linkedin.com/in/*"
             ],
         "js": ["jquery.js","content.js"],
         "run_at": "document_idle"        
@@ -22,6 +21,7 @@
     },
     "version": "0.4.5",
     "permissions": [
+        "tabs" ,
         "notifications",
         "storage",
         "identity",
