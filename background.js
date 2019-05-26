@@ -6,10 +6,15 @@ chrome.tabs.onUpdated.addListener(
       // like send the new url to contentscripts.js
       if (changeInfo.url) {
         console.log(changeInfo.url);
+        if(changeInfo.url.includes("linkedin.com/search/results/people/")){
+          var message = "connection list!";
+        } else {
+          var message = "profile clicked!"
+        }
         chrome.tabs.sendMessage( tabId, {
-          message: 'url_changed!',
+          message: message,
           url: changeInfo.url
-        })
+        });
       }
     }
   );

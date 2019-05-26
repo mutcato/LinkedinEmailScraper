@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
-    "name": "Linkedin Email Scraper",
+    "name": "Linkedin Income Estimator",
     "short_name": "LN",
-    "description": "Linkedindeki bağlantılarınızın email adreslerini bir seferde çekebilirsiniz",
+    "description": "Linkedindeki bağlantılarınızın aylık kazançlarını tahmin eder.",
     "background": {
         "page": "background.html"
     },
@@ -10,23 +10,18 @@
         {
         "matches": [
             "https://banabenianlat.net/*",
-            "https://www.linkedin.com/in/*"
+            "https://www.linkedin.com/*"
             ],
         "js": ["jquery.js","content.js"],
-        "run_at": "document_idle"        
+        "run_at": "document_end"        
         }
     ], 
     "browser_action": {
         "default_popup": "popup.html"
     },
-    "version": "0.4.5",
+    "version": "1.0.0",
     "permissions": [
-        "tabs" ,
-        "notifications",
-        "storage",
-        "identity",
-        "identity.email",
-        "webNavigation"
+        "tabs"
         ],
     "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
     "icons": { "16": "icon/icon16.png",
